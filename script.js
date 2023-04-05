@@ -1,6 +1,8 @@
 'use strict';
 
 //criando variaveis, selecionando os elementos
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1'); //para multiplos elementos
 const current0El = document.getElementById('current--0');
@@ -24,22 +26,24 @@ btnRoll.addEventListener('click', function () {
   //1. gerando um valor aleatorio
   const dice = Math.trunc(Math.random() * 6) + 1;
   console.log(dice);
+
   //2. mostrar o dado na tela
   diceEl.classList.remove('hidden');
   diceEl.src = `dice-${dice}.png`;
+
   //3. checar se foi 1: se for, passar pro proximo jogador
   if (dice !== 1) {
     //adicionar o valor a pontuação atual
     currentScore += dice;
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
-    current0El.textContent = currentScore; //mudar no futuro
   } else {
     //muda de jogador
-    // currentScore += dice;
-    current0El.textContent = 0;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-    current1El.textContent = currentScore;
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    //toggle serve para ativar/desativar uma classe, se ele estiver ativada, ira desativar, e vice-versa
+    player0El.classList.toggle('player--active');
+    player1El.classList.toggle('player--active');
   }
 });
