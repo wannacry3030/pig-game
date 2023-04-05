@@ -29,7 +29,11 @@ btnRoll.addEventListener('click', function () {
   if (dice !== 1) {
     //adicionar o valor a pontuação atual
     currentScore += dice;
+    current0El.textContent = currentScore; //mudar no futuro
   } else {
     //muda de jogador
+    // currentScore += dice;
+    current0El.textContent = 0;
+    current1El.textContent = currentScore;
   }
 });
