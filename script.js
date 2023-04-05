@@ -20,6 +20,7 @@ diceEl.classList.add('hidden');
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -32,44 +33,48 @@ const switchPlayer = function () {
 
 //funcionalidade de rolar o dado
 btnRoll.addEventListener('click', function () {
-  //1. gerando um valor aleatorio
-  const dice = Math.trunc(Math.random() * 6) + 1;
-  console.log(dice);
+  if (playing) {
+    //1. gerando um valor aleatorio
+    const dice = Math.trunc(Math.random() * 6) + 1;
+    console.log(dice);
 
-  //2. mostrar o dado na tela
-  diceEl.classList.remove('hidden');
-  diceEl.src = `dice-${dice}.png`;
+    //2. mostrar o dado na tela
+    diceEl.classList.remove('hidden');
+    diceEl.src = `dice-${dice}.png`;
 
-  //3. checar se foi 1: se for, passar pro proximo jogador
-  if (dice !== 1) {
-    //adicionar o valor a pontuação atual
-    currentScore += dice;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-  } else {
-    //muda de jogador
-    switchPlayer();
+    //3. checar se foi 1: se for, passar pro proximo jogador
+    if (dice !== 1) {
+      //adicionar o valor a pontuação atual
+      currentScore += dice;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      //muda de jogador
+      switchPlayer();
+    }
   }
 });
 
 btnHold.addEventListener('click', function () {
-  //1. adicionar o a pontuação ao total
-  scores[activePlayer] += currentScore;
-  // scores[1] = scores[1] + currentScore
-  document.getElementById(`score--${activePlayer}`).textContent =
-    scores[activePlayer];
-  //2. checar se a pontuação é >= 100
-  if (scores[activePlayer] >= 20) {
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add('player--winner');
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove('player--active');
-  } else {
-    //terminar o jogo
-
-    //caso nao seja, mudar o jogador
-    switchPlayer();
+  if (playing) {
+    //1. adicionar o a pontuação ao total
+    scores[activePlayer] += currentScore;
+    // scores[1] = scores[1] + currentScore
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+    //2. checar se a pontuação é >= 100
+    if (scores[activePlayer] >= 20) {
+      //terminar o jogo
+      playing = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      //caso nao seja, mudar o jogador
+      switchPlayer();
+    }
   }
 });
