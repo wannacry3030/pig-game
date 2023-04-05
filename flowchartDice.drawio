@@ -1,9 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2023-04-05T18:35:06.768Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0" version="21.1.4" etag="IMJhyYGDWrM5SZJJx8Vi" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-05T18:45:21.372Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="-L6irbCLMhEUzMPRQ3PA" version="21.1.4" type="github">
   <diagram name="Página-1" id="kLLfpwYvuvGkneWplXUD">
-    <mxGraphModel>
+    <mxGraphModel dx="1985" dy="1010" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Tp3x3xsuuLPvGS7GtfCE-1" target="Tp3x3xsuuLPvGS7GtfCE-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-1" value="Usuário rola o&lt;br&gt;dado" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=28;whiteSpace=wrap;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Tp3x3xsuuLPvGS7GtfCE-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-4" value="&lt;font color=&quot;#000000&quot;&gt;gera um valor aleatorio&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=28;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Tp3x3xsuuLPvGS7GtfCE-8" target="Tp3x3xsuuLPvGS7GtfCE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-8" value="&lt;font color=&quot;#000000&quot;&gt;mostra o valor na tela&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=28;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="560" y="70" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-12" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Não&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;" edge="1" parent="1" source="Tp3x3xsuuLPvGS7GtfCE-9" target="Tp3x3xsuuLPvGS7GtfCE-11">
+          <mxGeometry x="-0.5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-9" value="&lt;font color=&quot;#000000&quot;&gt;è 1?&lt;br&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="870" y="80" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Tp3x3xsuuLPvGS7GtfCE-11" target="Tp3x3xsuuLPvGS7GtfCE-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-11" value="&lt;font color=&quot;#000000&quot;&gt;add o valor ao score&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=28;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="70" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp3x3xsuuLPvGS7GtfCE-13" value="&lt;font color=&quot;#000000&quot;&gt;mostra o novo score&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=28;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontStyle=0;fontFamily=Tahoma;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="70" width="180" height="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
