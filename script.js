@@ -21,6 +21,15 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  currentScore = 0;
+  //toggle serve para ativar/desativar uma classe, se ele estiver ativada, ira desativar, e vice-versa
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
 //funcionalidade de rolar o dado
 btnRoll.addEventListener('click', function () {
   //1. gerando um valor aleatorio
@@ -39,12 +48,7 @@ btnRoll.addEventListener('click', function () {
       currentScore;
   } else {
     //muda de jogador
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    currentScore = 0;
-    //toggle serve para ativar/desativar uma classe, se ele estiver ativada, ira desativar, e vice-versa
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
+    switchPlayer();
   }
 });
 
@@ -52,10 +56,20 @@ btnHold.addEventListener('click', function () {
   //1. adicionar o a pontuação ao total
   scores[activePlayer] += currentScore;
   // scores[1] = scores[1] + currentScore
-  document.getElementById(`current--${activePlayer}`).textContent =
+  document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
   //2. checar se a pontuação é >= 100
-  //terminar o jogo
+  if (scores[activePlayer] >= 20) {
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--winner');
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove('player--active');
+  } else {
+    //terminar o jogo
 
-  //caso nao seja, mudar o jogador
+    //caso nao seja, mudar o jogador
+    switchPlayer();
+  }
 });
