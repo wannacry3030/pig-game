@@ -47,3 +47,15 @@ btnRoll.addEventListener('click', function () {
     player1El.classList.toggle('player--active');
   }
 });
+
+btnHold.addEventListener('click', function () {
+  //1. adicionar o a pontuação ao total
+  scores[activePlayer] += currentScore;
+  // scores[1] = scores[1] + currentScore
+  document.getElementById(`current--${activePlayer}`).textContent =
+    scores[activePlayer];
+  //2. checar se a pontuação é >= 100
+  //terminar o jogo
+
+  //caso nao seja, mudar o jogador
+});
